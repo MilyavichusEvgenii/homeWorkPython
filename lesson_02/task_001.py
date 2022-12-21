@@ -6,7 +6,7 @@ import re
 def TryNumb():
         listNum = []
         value = input("Введите целое число, или дробное число отделяя целую и дробную часть знаком ',': ")
-        listNum = re.split("|,|0", value)
+        listNum = re.split("|,|0|-", value)
         data = list(filter(None, listNum))
         result = [int(item) for item in data]
         return (result, value)
