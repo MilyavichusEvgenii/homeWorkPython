@@ -66,7 +66,7 @@ def PrintResult(a: list):
     return newTemp
 
 def WriteInFile(mass):
-    path = "FileTask_a04"
+    path = "FileTask_a04.txt"
     with open(path, 'a') as data:
         data.writelines(mass)
 
