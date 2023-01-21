@@ -1,14 +1,5 @@
 #Создайте программу для игры в ""Крестики-нолики"".
 from random import randint
-def GetNumb(massage):
-    result = 0
-    while True:
-        a = int(input(massage))
-        if a > 2 and a < 10 and a % 2 == 1:
-            result = a
-            break
-    return result
-
 def InitMap(a, b):
     tempList = [[b] * a for i in range(a)]
     return tempList
@@ -57,9 +48,6 @@ def Game(map, human, computer, empty):
             print("Kомпьютер выиграл")
             break
         
-        
-        
-
 def TapeHuman(map, human, computer, empty):
     xr = 0
     yr = 0
@@ -146,12 +134,9 @@ def Diagonal(map, char, xr, yr):
     elif xr == 0 and yr == (len(map) - 1):
         if map[xr][yr] == char and map[xr + 1][yr - 1] == char and map[xr + 2][yr - 2] == char:
             result = 1
-    #elif xr > 0 and xr < (len(map) - 1) or yr > 0 and yr < (len(map) - 1):
-        #if map[xr - 1][yr - 1] == char and map[xr][yr] == char and map[xr + 1][yr + 1] == char:
-            #result = 1 
     return result
 
-n = GetNumb("Введите нечетное число больше двух и меньше десяти для инициализации размера поля: ")
+n = 3
 charEmpty = '*'
 charHuman = 'x'
 charComputer = '0'

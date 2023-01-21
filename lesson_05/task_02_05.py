@@ -129,8 +129,10 @@ def HardComputer(sweets, tape, count):
     if sweets % tape > 0:
         if sweets > 56:
             r = sweets % tape
-        elif sweets <= 56 and sweets > 28:
+        elif sweets < 56 and sweets > 28:
             r = (sweets % tape) - 1
+    if sweets == 56:
+        r = 1
     if sweets <= 28:
         r = sweets
     return r
@@ -144,10 +146,6 @@ def TapeHuman(c, d):
             result = a
             break  
     return result
-
-
-
-
 
 min = 84
 option = 2
