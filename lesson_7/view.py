@@ -28,6 +28,6 @@ def MenuProg():
 
 
 def Print(data):
-    with open(data, 'r') as file:
+    with open(data, 'r', encoding='utf-8') as file:
         result = file.read()
     print(result)
