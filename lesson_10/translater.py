@@ -2,7 +2,7 @@ from deep_translator import GoogleTranslator
 
 def TranslateLang(text):
     marker = 0
-    for i in text:
+    for i in text.lower():
         if ord(i) >= 97 and ord(i) <= 122:
             marker = 1
 
